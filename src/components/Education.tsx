@@ -1,12 +1,12 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { GraduationCap, MapPin, Star } from "lucide-react";
 import { resumeData } from "@/data/resume";
 import SectionHeading from "./SectionHeading";
 
 export default function Education() {
   return (
-    <section id="education" className="relative py-24 sm:py-32">
+    <section id="education" className="relative py-16 sm:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Education"

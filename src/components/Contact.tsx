@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Mail, Phone, Linkedin, MapPin, ExternalLink } from "lucide-react";
 import { resumeData } from "@/data/resume";
 import SectionHeading from "./SectionHeading";
@@ -8,7 +8,7 @@ export default function Contact() {
   const { basics } = resumeData;
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32">
+    <section id="contact" className="relative py-16 sm:py-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Get In Touch"
@@ -20,7 +20,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl border border-white/10 bg-white/[0.02] p-8 sm:p-10 backdrop-blur-sm"
+          className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 sm:p-10 backdrop-blur-sm"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <a
@@ -32,7 +32,7 @@ export default function Contact() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs text-white/40 mb-0.5">Email</p>
-                <p className="text-sm text-white/70 group-hover:text-white truncate transition-colors">
+                <p className="text-sm text-white/70 group-hover:text-white break-all transition-colors">
                   {basics.email}
                 </p>
               </div>
@@ -97,9 +97,6 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="mt-6 pt-6 border-t border-white/5 text-center">
-            <p className="text-xs text-white/30">Global mobility — see Visas section</p>
-          </div>
         </motion.div>
       </div>
     </section>

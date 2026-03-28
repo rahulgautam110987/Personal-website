@@ -4,23 +4,67 @@ export const resumeData = {
     initials: "RG",
     title: "Senior Tech Expert – Platform & IT Resilience",
     headerCerts:
-      "TOGAF-10 (1 & 2), PSM©, PMP©, Azure, AWS Architect- Prof, Salesforce Architect (9X)",
+      "TOGAF-10 (1 & 2), PSM©, PMP©, Azure, AWS Architect – Professional, Salesforce Architect (9X)",
     phone: "+91-9319993881",
     phoneSecondary: "+91-9711924745",
     email: "rahulgautam1187@gmail.com",
     linkedin: "https://www.linkedin.com/in/rahulgautam",
     education_highlight: "MBA – IIM Calcutta",
-    visa: "Valid B1/B2 visa till 2026",
     location: "India",
     summary: [
-      "Senior Tech expert with 17+ years architecting and scaling petabyte-class, cloud-native data and storage platforms—delivering mission-critical services in Indian banking & capital markets, automative, energy, telecom, and retail while meeting stringent regulatory, performance, and resiliency SLAs",
+      "Senior Tech expert with 17+ years architecting and scaling petabyte-class, cloud-native data and storage platforms—delivering mission-critical services in Indian banking & capital markets, automotive, energy, telecom, and retail while meeting stringent regulatory, performance, and resiliency SLAs",
       "Built and led a cross-cultural team across multiple geographies (US, Sweden, Vietnam and Mexico) to deliver B2B and B2C solutions",
     ],
     specialties:
       "IT Resiliency, Enterprise / IT / Integration / Business architecture, IT Operating model, Cloud suitability assessment (Migration, deployment, Ops model, FinOps), Application rationalization, Technology modernization assessments (DevSecOps, API Manager, Data architecture, Performance, microservice, network, etc.), Loyalty management, Business Development, ITIL Processes v4, PRM IT v3, BPMN 2.0, IT Governance model, Agile, Scrum, Cybersecurity frameworks, Tech RFPs, Product Roadmap Development, GenAI solution consultant, Project and Portfolio management",
     technologies:
-      "AWS, Azure, Salesforce (Sales, Service, Commerce, Force.com, Community), Datorama, SFMC, Oracle CX (Sales, Service), Python, CI/CD pipeline diagnose, Observability (AppDynamics), Batch processing (Hadoop, Spark), SAP ERP Integration, MuleSoft, Jitterbit, React Native, Flutter, SharePoint, Siebel EAI, Siebel Order Management, Siebel, EI, IAM Solutions, FIGMA, Java, ARIS, BPMN, HTML, jQuery, SQL, Apex, RestAPI, Webservice, Visualforce, eScripts, PHP, XML, SOAP, GraghQL, Aura, Lighting framework, TensorFlow, Docker, Kubernetes, GitHub, MLFlow, Power BI, Excel modelling, PowerPoint, JIRA, MPP databases, MarTech stack, Adobe experience cloud, Campaign manager, Airflow, Terraform, Ansible, Splunk, Solace",
+      "AWS, Azure, Salesforce (Sales, Service, Commerce, Force.com, Community), Datorama, SFMC, Oracle CX (Sales, Service), Python, CI/CD pipeline diagnose, Observability (AppDynamics), Batch processing (Hadoop, Spark), SAP ERP Integration, MuleSoft, Jitterbit, React Native, Flutter, SharePoint, Siebel EAI, Siebel Order Management, Siebel, EI, IAM Solutions, FIGMA, Java, ARIS, BPMN, HTML, jQuery, SQL, Apex, RestAPI, Webservice, Visualforce, eScripts, PHP, XML, SOAP, GraphQL, Aura, Lightning framework, TensorFlow, Docker, Kubernetes, GitHub, MLFlow, Power BI, Excel modelling, PowerPoint, JIRA, MPP databases, MarTech stack, Adobe experience cloud, Campaign manager, Airflow, Terraform, Ansible, Splunk, Solace",
   },
+
+  specialtiesList: [
+    "IT Resiliency",
+    "Enterprise Architecture",
+    "IT Architecture",
+    "Integration Architecture",
+    "Business Architecture",
+    "IT Operating Model",
+    "Cloud Suitability Assessment",
+    "Cloud Migration & FinOps",
+    "Application Rationalization",
+    "Technology Modernization",
+    "DevSecOps",
+    "API Management",
+    "Data Architecture",
+    "Microservices",
+    "Loyalty Management",
+    "Business Development",
+    "ITIL v4",
+    "BPMN 2.0",
+    "IT Governance",
+    "Agile & Scrum",
+    "Cybersecurity Frameworks",
+    "Tech RFPs",
+    "Product Roadmap Development",
+    "GenAI Solution Consulting",
+    "Project & Portfolio Management",
+  ],
+
+  globalReach: [
+    { metric: "15+", label: "Countries" },
+    { metric: "8+", label: "Industries" },
+    { metric: "7", label: "Companies" },
+    { metric: "20+", label: "Team Size Led" },
+  ],
+
+  companies: [
+    "McKinsey & Company",
+    "Accenture",
+    "KPMG",
+    "Nagarro",
+    "TCS",
+    "Birlasoft",
+    "Wipro",
+  ],
 
   experience: [
     {

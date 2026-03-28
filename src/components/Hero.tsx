@@ -1,16 +1,31 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   ArrowDown,
-  Download,
   MapPin,
   Mail,
-  Phone,
-  Linkedin,
 } from "lucide-react";
+import { Cloud, Sun, CloudRain, CloudSnow, CloudLightning, CloudFog } from "lucide-react";
 import { resumeData } from "@/data/resume";
+import type { WeatherCondition } from "@/hooks/useWeather";
 
-export default function Hero() {
+const WEATHER_ICONS: Record<string, React.ReactNode> = {
+  clear: <Sun className="w-3.5 h-3.5" />,
+  clouds: <Cloud className="w-3.5 h-3.5" />,
+  rain: <CloudRain className="w-3.5 h-3.5" />,
+  thunderstorm: <CloudLightning className="w-3.5 h-3.5" />,
+  snow: <CloudSnow className="w-3.5 h-3.5" />,
+  mist: <CloudFog className="w-3.5 h-3.5" />,
+};
+
+interface HeroProps {
+  city?: string | null;
+  country?: string | null;
+  condition?: WeatherCondition | null;
+  temp?: number | null;
+}
+
+export default function Hero({ city, country, condition, temp }: HeroProps) {
   const { basics } = resumeData;
 
   const scrollToExperience = () => {
@@ -24,7 +39,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center pt-16"
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 text-center">
         {/* Credential chips */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,6 +57,21 @@ export default function Hero() {
               </span>
             )
           )}
+          {city && (
+            <motion.span
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+              className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-full bg-white/5 border border-white/10 text-white/60"
+            >
+              {condition && WEATHER_ICONS[condition]}
+              <MapPin className="w-3 h-3" />
+              {city}, {country}
+              {temp !== null && temp !== undefined && (
+                <span className="text-white/40 ml-0.5">{temp}°C</span>
+              )}
+            </motion.span>
+          )}
         </motion.div>
 
         {/* Name */}
@@ -49,7 +79,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4"
         >
           <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600 dark:from-white dark:via-white dark:to-white/70 bg-clip-text text-transparent">
             {basics.name}
@@ -91,47 +121,23 @@ export default function Hero() {
           ))}
         </motion.div>
 
-        {/* Contact chips */}
+        {/* Global Reach strip */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-3 mb-10"
+          className="flex flex-wrap justify-center gap-6 sm:gap-10 mb-10"
         >
-          <a
-            href={`mailto:${basics.email}`}
-            className="inline-flex items-center gap-2 px-4 py-2 text-xs rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20 transition-colors"
-          >
-            <Mail className="w-3.5 h-3.5" />
-            {basics.email}
-          </a>
-          <a
-            href={`tel:${basics.phone}`}
-            className="inline-flex items-center gap-2 px-4 py-2 text-xs rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20 transition-colors"
-          >
-            <Phone className="w-3.5 h-3.5" />
-            {basics.phone}
-          </a>
-          <a
-            href={`tel:${basics.phoneSecondary}`}
-            className="inline-flex items-center gap-2 px-4 py-2 text-xs rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20 transition-colors"
-          >
-            <Phone className="w-3.5 h-3.5" />
-            {basics.phoneSecondary}
-          </a>
-          <a
-            href={basics.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 text-xs rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20 transition-colors"
-          >
-            <Linkedin className="w-3.5 h-3.5" />
-            LinkedIn
-          </a>
-          <span className="inline-flex items-center gap-2 px-4 py-2 text-xs rounded-full bg-white/5 border border-white/10 text-white/60">
-            <MapPin className="w-3.5 h-3.5" />
-            {basics.location}
-          </span>
+          {resumeData.globalReach.map((item, i) => (
+            <div key={i} className="text-center">
+              <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {item.metric}
+              </p>
+              <p className="text-[11px] sm:text-xs font-medium uppercase tracking-wider" style={{ color: "var(--text-4)" }}>
+                {item.label}
+              </p>
+            </div>
+          ))}
         </motion.div>
 
         {/* CTAs */}
@@ -139,11 +145,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
         >
           <button
             onClick={scrollToExperience}
-            className="group relative px-8 py-3.5 rounded-xl text-sm font-semibold overflow-hidden"
+            className="group relative w-full sm:w-auto px-8 py-3.5 rounded-xl text-sm font-semibold overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 transition-all group-hover:opacity-90" />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500" />
@@ -161,10 +167,10 @@ export default function Hero() {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group px-8 py-3.5 rounded-xl text-sm font-semibold text-white/70 border border-white/10 hover:border-white/20 hover:text-white bg-white/5 hover:bg-white/10 transition-all flex items-center gap-2"
+            className="group w-full sm:w-auto px-8 py-3.5 rounded-xl text-sm font-semibold text-white/70 border border-white/10 hover:border-white/20 hover:text-white bg-white/5 hover:bg-white/10 transition-all flex items-center justify-center gap-2"
           >
-            <Download className="w-4 h-4" />
-            Download Resume
+            <Mail className="w-4 h-4" />
+            Get In Touch
           </a>
         </motion.div>
 

@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Code2 } from "lucide-react";
 import { resumeData } from "@/data/resume";
 import SectionHeading from "./SectionHeading";
@@ -19,7 +19,7 @@ const CATEGORY_GRADIENTS: Record<string, string> = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24 sm:py-32">
+    <section id="skills" className="relative py-16 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Skills & Technologies"
@@ -34,12 +34,19 @@ export default function Skills() {
           viewport={{ once: true }}
           className="mb-12 p-6 rounded-2xl border border-white/5 bg-white/[0.02]"
         >
-          <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
+          <h3 className="text-sm font-semibold text-white/60 mb-4 uppercase tracking-wider">
             Specialties
           </h3>
-          <p className="text-sm text-white/50 leading-relaxed">
-            {resumeData.basics.specialties}
-          </p>
+          <div className="flex flex-wrap gap-2">
+            {resumeData.specialtiesList.map((item, i) => (
+              <span
+                key={i}
+                className="px-3 py-1.5 text-xs rounded-lg bg-white/5 text-white/60 border border-white/5 hover:border-white/15 hover:text-white/80 transition-colors"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </motion.div>
 
         {/* Skills grid */}
@@ -80,20 +87,6 @@ export default function Skills() {
           })}
         </div>
 
-        {/* Technologies full list */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 p-6 rounded-2xl border border-white/5 bg-white/[0.02]"
-        >
-          <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-            Full Technology Stack
-          </h3>
-          <p className="text-xs text-white/40 leading-relaxed font-mono">
-            {resumeData.basics.technologies}
-          </p>
-        </motion.div>
       </div>
     </section>
   );

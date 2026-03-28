@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { BadgeCheck, Shield, Cloud, Database } from "lucide-react";
 import { resumeData } from "@/data/resume";
 import SectionHeading from "./SectionHeading";
@@ -23,7 +23,7 @@ function getCertColor(cert: string): string {
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="relative py-24 sm:py-32">
+    <section id="certifications" className="relative py-16 sm:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Certifications"

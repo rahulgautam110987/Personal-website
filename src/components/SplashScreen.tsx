@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface SplashScreenProps {
@@ -45,7 +45,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         exit={{ opacity: 0, scale: 1.05 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="fixed inset-0 z-[100] flex flex-col items-center justify-center"
-        style={{ backgroundColor: "var(--splash-bg)" }}
+        style={{ backgroundColor: "var(--bg-splash)" }}
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -65,7 +65,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               animate={{ rotate: 360 }}
               transition={{ duration: 2, ease: "linear", repeat: Infinity }}
             />
-            <div className="absolute inset-[2px] rounded-full" style={{ backgroundColor: "var(--splash-bg)" }} />
+            <div className="absolute inset-[2px] rounded-full" style={{ backgroundColor: "var(--bg-splash)" }} />
             <motion.span
               className="relative z-10 text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
               initial={{ opacity: 0 }}
@@ -98,7 +98,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         {phase === "exit" && (
           <motion.div
             className="absolute inset-0"
-            style={{ backgroundColor: "var(--splash-bg)" }}
+            style={{ backgroundColor: "var(--bg-splash)" }}
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.5 }}

@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Globe, Plane } from "lucide-react";
 import { resumeData } from "@/data/resume";
 import SectionHeading from "./SectionHeading";
@@ -12,7 +12,7 @@ const FLAG_EMOJI: Record<string, string> = {
 
 export default function Visas() {
   return (
-    <section id="visas" className="relative py-24 sm:py-32">
+    <section id="visas" className="relative py-16 sm:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Valid Visas"

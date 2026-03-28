@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import ThemeToggle from "./ThemeToggle";
+import LocationButton from "./LocationButton";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
@@ -19,9 +20,36 @@ const NAV_ITEMS = [
 
 const SECTION_IDS = NAV_ITEMS.map((n) => n.id);
 
-export default function Navbar() {
+interface NavbarProps {
+  weatherActive?: boolean;
+  weatherCity?: string | null;
+  weatherLoading?: boolean;
+  onEnableWeather?: (lat: number, lon: number) => void;
+  onEnableWeatherByCity?: (city: string) => void;
+  onDisableWeather?: () => void;
+}
+
+export default function Navbar({
+  weatherActive = false,
+  weatherCity,
+  weatherLoading,
+  onEnableWeather,
+  onEnableWeatherByCity,
+  onDisableWeather,
+}: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const activeId = useScrollSpy(SECTION_IDS);
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   const scrollTo = (id: string) => {
     setMobileOpen(false);
@@ -39,15 +67,25 @@ export default function Navbar() {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="fixed top-0 left-0 right-0 z-40 border-b border-white/5"
       >
-        <div className="backdrop-blur-xl" style={{ backgroundColor: "var(--nav-bg)" }}>
+        <div className="backdrop-blur-xl" style={{ backgroundColor: "var(--bg-nav)" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-            {/* Logo */}
-            <button
-              onClick={() => scrollTo("hero")}
-              className="text-lg font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
-            >
-              RG
-            </button>
+            {/* Logo + Location */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => scrollTo("hero")}
+                className="text-lg font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+              >
+                RG
+              </button>
+              <LocationButton
+                weatherActive={weatherActive}
+                cityName={weatherCity}
+                onEnable={onEnableWeather || (() => {})}
+                onEnableByCity={onEnableWeatherByCity || (() => {})}
+                onDisable={onDisableWeather || (() => {})}
+                loading={weatherLoading}
+              />
+            </div>
 
             {/* Desktop nav */}
             <div className="hidden md:flex items-center gap-1">
@@ -86,7 +124,7 @@ export default function Navbar() {
               <ThemeToggle />
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="p-2 rounded-lg bg-white/5 border border-white/10"
+                className="p-2.5 rounded-lg bg-white/5 border border-white/10"
                 aria-label="Toggle menu"
               >
                 {mobileOpen ? (
@@ -119,7 +157,7 @@ export default function Navbar() {
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               className="absolute right-0 top-0 bottom-0 w-64 backdrop-blur-xl border-l border-white/10 pt-20 px-6"
-              style={{ backgroundColor: "var(--nav-bg)" }}
+              style={{ backgroundColor: "var(--bg-nav)" }}
             >
               <div className="flex flex-col gap-1">
                 {NAV_ITEMS.map((item, i) => (

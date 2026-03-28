@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { Trophy, TrendingUp, Users, Award } from "lucide-react";
 import { resumeData } from "@/data/resume";
 import SectionHeading from "./SectionHeading";
@@ -88,7 +88,7 @@ export default function Achievements() {
   };
 
   return (
-    <section id="achievements" className="relative py-24 sm:py-32">
+    <section id="achievements" className="relative py-16 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Key Achievements"

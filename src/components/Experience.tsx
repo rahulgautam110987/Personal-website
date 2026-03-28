@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import {
   ChevronDown,
   Building2,
@@ -60,13 +60,36 @@ export default function Experience() {
   const [expandedIndex, setExpandedIndex] = useState<number>(0);
 
   return (
-    <section id="experience" className="relative py-24 sm:py-32">
+    <section id="experience" className="relative py-16 sm:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Professional Experience"
           subtitle="17+ years of building enterprise solutions across 6 countries"
           icon={<Briefcase className="w-5 h-5" />}
         />
+
+        {/* Trusted By strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <p className="text-[10px] uppercase tracking-[0.2em] text-center mb-4 font-medium" style={{ color: "var(--text-5)" }}>
+            Trusted By
+          </p>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 sm:gap-x-10">
+            {resumeData.companies.map((name) => (
+              <span
+                key={name}
+                className="text-sm sm:text-base font-semibold tracking-wide"
+                style={{ color: "var(--text-4)" }}
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Impact highlights strip */}
         <motion.div
