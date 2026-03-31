@@ -557,4 +557,3 @@ export const resumeData = {
   ],
 
 };
-
