@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import Image from "next/image";
 import {
   ArrowDown,
   MapPin,
@@ -74,6 +75,27 @@ export default function Hero({ city, country, condition, temp }: HeroProps) {
           )}
         </motion.div>
 
+        {/* Headshot */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.15, duration: 0.7, ease: "easeOut" }}
+          className="flex justify-center mb-6"
+        >
+          <div className="relative group">
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-60 blur-sm group-hover:opacity-80 transition-opacity" />
+            <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-white/10">
+              <Image
+                src="/images/rahul-gautam.png"
+                alt={basics.name}
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+          </div>
+        </motion.div>
+
         {/* Name */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -91,10 +113,22 @@ export default function Hero({ city, country, condition, temp }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.6 }}
-          className="text-lg sm:text-xl md:text-2xl font-medium mb-2 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent light-subtitle"
+          className="text-lg sm:text-xl md:text-2xl font-medium mb-3 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent light-subtitle"
         >
           {basics.title}
         </motion.p>
+
+        {/* McKinsey badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          className="flex justify-center mb-4"
+        >
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 text-sm font-semibold rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-400">
+            McKinsey &amp; Company
+          </span>
+        </motion.div>
 
         {/* Header certs */}
         <motion.p

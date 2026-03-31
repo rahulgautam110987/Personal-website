@@ -12,7 +12,7 @@ export default function Contact() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Get In Touch"
-          subtitle="Open to discussing enterprise architecture, cloud strategy, and technology leadership opportunities"
+          subtitle=""
           icon={<Mail className="w-5 h-5" />}
         />
 

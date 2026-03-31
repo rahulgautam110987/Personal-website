@@ -7,7 +7,6 @@ import {
   MapPin,
   Calendar,
   Briefcase,
-  Sparkles,
 } from "lucide-react";
 import { resumeData } from "@/data/resume";
 import { cn } from "@/lib/utils";
@@ -59,12 +58,26 @@ function highlightMetrics(text: string): React.ReactNode {
 export default function Experience() {
   const [expandedIndex, setExpandedIndex] = useState<number>(0);
 
+  const scrollToCompany = (companyName: string) => {
+    const expIdx = resumeData.experience.findIndex((e) =>
+      e.company.toLowerCase().includes(companyName.toLowerCase().split(" ")[0])
+    );
+    if (expIdx !== -1) {
+      setExpandedIndex(expIdx);
+      setTimeout(() => {
+        document
+          .getElementById(`exp-${expIdx}`)
+          ?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 100);
+    }
+  };
+
   return (
     <section id="experience" className="relative py-16 sm:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Professional Experience"
-          subtitle="17+ years of building enterprise solutions across 6 countries"
+          subtitle=""
           icon={<Briefcase className="w-5 h-5" />}
         />
 
@@ -80,42 +93,16 @@ export default function Experience() {
           </p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 sm:gap-x-10">
             {resumeData.companies.map((name) => (
-              <span
+              <button
                 key={name}
-                className="text-sm sm:text-base font-semibold tracking-wide"
+                onClick={() => scrollToCompany(name)}
+                className="text-sm sm:text-base font-semibold tracking-wide hover:text-blue-400 transition-colors cursor-pointer"
                 style={{ color: "var(--text-4)" }}
               >
                 {name}
-              </span>
+              </button>
             ))}
           </div>
-        </motion.div>
-
-        {/* Impact highlights strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-16"
-        >
-          {resumeData.topImpact.map((item, i) => (
-            <div
-              key={i}
-              className="relative group rounded-xl border border-white/10 bg-white/[0.02] p-4 hover:border-blue-500/30 transition-colors overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative">
-                <Sparkles className="w-4 h-4 text-yellow-400/60 mb-2" />
-                <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  {item.metric}
-                </p>
-                <p className="text-sm font-medium text-white/80 mt-1">
-                  {item.label}
-                </p>
-                <p className="text-xs text-white/40 mt-0.5">{item.context}</p>
-              </div>
-            </div>
-          ))}
         </motion.div>
 
         {/* Timeline */}
@@ -134,6 +121,7 @@ export default function Experience() {
               return (
                 <motion.div
                   key={idx}
+                  id={`exp-${idx}`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}

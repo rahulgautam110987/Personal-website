@@ -27,7 +27,7 @@ export default function Certifications() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Certifications"
-          subtitle={`${resumeData.certifications.length}+ professional certifications across cloud, architecture, and enterprise platforms`}
+          subtitle={`${resumeData.certifications.length} professional certifications across cloud, architecture, and enterprise platforms`}
           icon={<BadgeCheck className="w-5 h-5" />}
         />
 

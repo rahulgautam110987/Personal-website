@@ -1,37 +1,37 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
-import { Trophy, TrendingUp, Users, Award } from "lucide-react";
+import { Trophy, TrendingUp, Award } from "lucide-react";
 import { resumeData } from "@/data/resume";
 import SectionHeading from "./SectionHeading";
 
+const TYPE_LABELS: Record<string, string> = {
+  thought_leadership: "Thought Leadership",
+  client_impact: "Client Impact",
+  business_building: "Business Building",
+};
+
 const TYPE_ICONS: Record<string, React.ReactNode> = {
-  metrics: <TrendingUp className="w-4 h-4" />,
-  wins: <Trophy className="w-4 h-4" />,
-  leadership: <Users className="w-4 h-4" />,
-  awards: <Award className="w-4 h-4" />,
+  thought_leadership: <Award className="w-4 h-4" />,
+  client_impact: <TrendingUp className="w-4 h-4" />,
+  business_building: <Trophy className="w-4 h-4" />,
 };
 
 const TYPE_COLORS: Record<string, { bg: string; border: string; text: string }> = {
-  metrics: {
-    bg: "bg-blue-500/10",
-    border: "border-blue-500/20",
-    text: "text-blue-400",
-  },
-  wins: {
-    bg: "bg-yellow-500/10",
-    border: "border-yellow-500/20",
-    text: "text-yellow-400",
-  },
-  leadership: {
+  thought_leadership: {
     bg: "bg-purple-500/10",
     border: "border-purple-500/20",
     text: "text-purple-400",
   },
-  awards: {
-    bg: "bg-cyan-500/10",
-    border: "border-cyan-500/20",
-    text: "text-cyan-400",
+  client_impact: {
+    bg: "bg-blue-500/10",
+    border: "border-blue-500/20",
+    text: "text-blue-400",
+  },
+  business_building: {
+    bg: "bg-yellow-500/10",
+    border: "border-yellow-500/20",
+    text: "text-yellow-400",
   },
 };
 
@@ -82,9 +82,9 @@ function AnimatedCounter({ value }: { value: string }) {
 
 export default function Achievements() {
   const grouped = {
-    metrics: resumeData.achievements.filter((a) => a.type === "metrics"),
-    wins: resumeData.achievements.filter((a) => a.type === "wins"),
-    leadership: resumeData.achievements.filter((a) => a.type === "leadership"),
+    thought_leadership: resumeData.achievements.filter((a) => a.type === "thought_leadership"),
+    client_impact: resumeData.achievements.filter((a) => a.type === "client_impact"),
+    business_building: resumeData.achievements.filter((a) => a.type === "business_building"),
   };
 
   return (
@@ -109,8 +109,8 @@ export default function Achievements() {
                 className="flex items-center gap-2 mb-6"
               >
                 <span className={`${colors.text}`}>{icon}</span>
-                <h3 className="text-lg font-semibold text-white/80 capitalize">
-                  {type}
+                <h3 className="text-lg font-semibold text-white/80">
+                  {TYPE_LABELS[type] || type}
                 </h3>
                 <span className="text-xs text-white/30 font-mono">
                   ({items.length})
@@ -133,9 +133,9 @@ export default function Achievements() {
                       className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity ${colors.bg}`}
                       style={{
                         background: `radial-gradient(circle at 30% 30%, ${
-                          type === "wins"
+                          type === "business_building"
                             ? "rgba(234,179,8,0.08)"
-                            : type === "leadership"
+                            : type === "thought_leadership"
                             ? "rgba(139,92,246,0.08)"
                             : "rgba(59,130,246,0.08)"
                         }, transparent 70%)`,
@@ -146,9 +146,9 @@ export default function Achievements() {
                       <div className="text-3xl sm:text-4xl font-bold mb-2">
                         <span
                           className={`bg-gradient-to-r ${
-                            type === "wins"
+                            type === "business_building"
                               ? "from-yellow-400 to-amber-400"
-                              : type === "leadership"
+                              : type === "thought_leadership"
                               ? "from-purple-400 to-pink-400"
                               : "from-blue-400 to-cyan-400"
                           } bg-clip-text text-transparent`}

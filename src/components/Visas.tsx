@@ -16,7 +16,7 @@ export default function Visas() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Valid Visas"
-          subtitle="Active travel documents enabling global engagement"
+          subtitle=""
           icon={<Globe className="w-5 h-5" />}
         />
 

@@ -12,8 +12,8 @@ export const resumeData = {
     education_highlight: "MBA – IIM Calcutta",
     location: "India",
     summary: [
-      "Senior Tech expert with 17+ years architecting and scaling petabyte-class, cloud-native data and storage platforms—delivering mission-critical services in Indian banking & capital markets, automotive, energy, telecom, and retail while meeting stringent regulatory, performance, and resiliency SLAs",
-      "Built and led a cross-cultural team across multiple geographies (US, Sweden, Vietnam and Mexico) to deliver B2B and B2C solutions",
+      "Strategic technology leader with 17+ years advising C-suite executives on petabyte-scale platform design, IT resilience, and digital transformation—driving measurable business outcomes across banking & capital markets, automotive, and energy",
+      "Proven track record of building high-performance teams across 15+ countries, securing $10M+ in client engagements, and delivering regulatory-first frameworks adopted at national scale",
     ],
     specialties:
       "IT Resiliency, Enterprise / IT / Integration / Business architecture, IT Operating model, Cloud suitability assessment (Migration, deployment, Ops model, FinOps), Application rationalization, Technology modernization assessments (DevSecOps, API Manager, Data architecture, Performance, microservice, network, etc.), Loyalty management, Business Development, ITIL Processes v4, PRM IT v3, BPMN 2.0, IT Governance model, Agile, Scrum, Cybersecurity frameworks, Tech RFPs, Product Roadmap Development, GenAI solution consultant, Project and Portfolio management",
@@ -50,10 +50,10 @@ export const resumeData = {
   ],
 
   globalReach: [
-    { metric: "15+", label: "Countries" },
-    { metric: "8+", label: "Industries" },
-    { metric: "7", label: "Companies" },
-    { metric: "20+", label: "Team Size Led" },
+    { metric: "$10M+", label: "Revenue Secured" },
+    { metric: "25+", label: "Direct Reports" },
+    { metric: "15+", label: "Countries Served" },
+    { metric: "8+", label: "Industries (BFSI Focus)" },
   ],
 
   companies: [
@@ -62,14 +62,12 @@ export const resumeData = {
     "KPMG",
     "Nagarro",
     "TCS",
-    "Birlasoft",
-    "Wipro",
   ],
 
   experience: [
     {
       company: "McKinsey & Company",
-      locations: "India, Thailand, HongKong, Vietnam, Dubai",
+      locations: "India, Thailand, Hong Kong, Vietnam, Dubai",
       role: "Senior Tech Expert – Platform & IT Resilience (India banking)",
       dates: "Feb 2023 – Present",
       bullets: [
@@ -96,14 +94,14 @@ export const resumeData = {
         {
           title: "Technology Blueprint",
           subbullets: [
-            "Independently assessed the technology maturity of India's largest Indian banking client, created detailed capability maps, and developed network, security, and tech architecture diagrams, evaluating their complete tech stack including telematics and MarTech stack",
-            "Developed a strategic roadmap that enabled the successful implementation of their SuperApp, enhancing customer experience, the NPS score by 10%, within first 2 months and increasing customer base to 6 million in 1st year",
+            "Independently assessed the technology maturity of India's largest banking client, created detailed capability maps, and developed network, security, and tech architecture diagrams, evaluating their complete tech stack including telematics and MarTech stack",
+            "Developed a strategic roadmap that enabled the successful implementation of their SuperApp, enhancing customer experience and improving NPS score by 10% within first 2 months, increasing customer base to 6 million in 1st year",
           ],
         },
         {
           title: "IT Resiliency for Capital Markets",
           subbullets: [
-            "Developed the India's first SEBI-approved IT resiliency model for stock exchanges, set to be implemented across all Indian stock markets, establishing a baseline score and a trendline score to track improvements",
+            "Developed India's first SEBI-approved IT resiliency model for stock exchanges, set to be implemented across all Indian stock markets, establishing a baseline score and a trendline score to track improvements",
           ],
         },
         {
@@ -169,7 +167,7 @@ export const resumeData = {
     },
     {
       company: "Accenture Strategy and Consulting",
-      locations: "India, Sweden, Finland, Kuwait, Saudi",
+      locations: "India, Sweden, Finland, Kuwait, Saudi, Dubai, UK",
       role: "Manager – Tech Strategy and Advisory (Cloud First)",
       dates: "April 2021 – Sep 2022",
       bullets: [
@@ -190,7 +188,7 @@ export const resumeData = {
           title: "Application Portfolio Rationalization – Kuwait",
           subbullets: [
             "Conducted business capabilities assessment & planning supported by analyzing the current state of the capabilities & classifying desired future state capabilities, formulating target state",
-            "Build and pitch the business case of APO exercise, building 500K opportunity for the company",
+            "Built and pitched the business case of APO exercise, building $500K opportunity for the company",
           ],
         },
         {
@@ -216,7 +214,7 @@ export const resumeData = {
         {
           title: "Business Case – American Fan Blade Manufacturer",
           subbullets: [
-            "Co-ordinated with pre-sales/business development team to design and implement the actionable business case (SFDC service cloud + Mobility) for American fan blade manufacturer, leading to expected business value of 20% faster case resolution",
+            "Coordinated with pre-sales/business development team to design and implement the actionable business case (SFDC service cloud + Mobility) for American fan blade manufacturer, leading to expected business value of 20% faster case resolution",
           ],
         },
         {
@@ -249,7 +247,7 @@ export const resumeData = {
           title: "Telecom Client – Mexico",
           subbullets: [
             "Functioned as an onsite Engagement manager to form and lead a team of nine engineers for a Telecom client in Mexico to set-up and ramp-up support services, bringing stability to client's IT system and building a long-term trusted business relationship",
-            "Engaged with a client IT team to proactively study current application gaps, upselling new business opportunity of Service request module + Oracle Secure enterprise search worth $200K, thus reducing TAT for issue resolution by 60%",
+            "Engaged with a client IT team to proactively study current application gaps, upselling new business opportunity of Service request module + Oracle Secure enterprise search worth $1.5M, thus reducing TAT for issue resolution by 60%",
           ],
         },
         {
@@ -290,7 +288,7 @@ export const resumeData = {
         {
           title: "Order Management CRM – Telecom B2B",
           subbullets: [
-            "Co-ordinated with 3-member team to enable Pan-India roll out of \"Order Management\" CRM application for telecom B2B users, led to decrease in order-fulfilment time by 30% and improving CSI to 90%, the success resulted in many future projects for Wipro",
+            "Coordinated with 3-member team to enable Pan-India roll out of \"Order Management\" CRM application for telecom B2B users, led to decrease in order-fulfilment time by 30% and improving CSI to 90%, the success resulted in many future projects for Wipro",
           ],
         },
       ],
@@ -299,119 +297,88 @@ export const resumeData = {
 
   achievements: [
     {
-      metric: "60–70%",
-      label: "PRD Draft Time Reduction",
-      context: "Agentic AI PRD copilot at McKinsey",
-      type: "metrics",
+      metric: "India's 1st",
+      label: "SEBI-Approved IT Resiliency Model",
+      context: "For stock exchanges — set to be implemented across all Indian stock markets",
+      type: "thought_leadership",
     },
     {
-      metric: "30–50%",
-      label: "Estimation Cycle Faster",
-      context: "Multi-agent effort estimator for Indian Pvt bank",
-      type: "metrics",
+      metric: "1200+",
+      label: "Enterprise Performance Metrics",
+      context: "Designed KPI framework for Q-Commerce enterprise architecture — UK",
+      type: "thought_leadership",
+    },
+    {
+      metric: "150+",
+      label: "Professionals Trained & Upskilled",
+      context: "Edvantage initiative at Nagarro — reduced employee churn by 20%",
+      type: "thought_leadership",
     },
     {
       metric: "10x",
       label: "Platform Customer Growth",
-      context: "SuperApp for India's largest Automotive client in 1.5 years",
-      type: "metrics",
+      context: "SuperApp for India's largest automotive client in 1.5 years",
+      type: "client_impact",
     },
     {
       metric: "6M",
       label: "Customer Base in 1st Year",
       context: "SuperApp for India's largest banking client",
-      type: "metrics",
+      type: "client_impact",
     },
     {
-      metric: "$500K",
-      label: "Business Secured for McKinsey",
-      context:
-        "Independently converted four IT resiliency & GenAI studies",
-      type: "wins",
+      metric: "60–70%",
+      label: "PRD Draft Time Reduction",
+      context: "Agentic AI PRD copilot — policy-aware with RAG and audit trail",
+      type: "client_impact",
     },
     {
-      metric: "India's 1st",
-      label: "SEBI-Approved IT Resiliency Model",
-      context: "For stock exchanges, to be implemented across all Indian stock markets",
-      type: "leadership",
-    },
-    {
-      metric: "10%",
-      label: "NPS Score Improvement",
-      context: "Banking SuperApp within first 2 months",
-      type: "metrics",
+      metric: "30–50%",
+      label: "Estimation Cycle Faster",
+      context: "Multi-agent effort estimator for Indian private bank",
+      type: "client_impact",
     },
     {
       metric: "100%",
       label: "Regulatory Compliance",
-      context: "SEWA dashboard for India's largest bank",
-      type: "metrics",
+      context: "SEWA dashboard for India's largest bank — L1/L2/L3 for regulators",
+      type: "client_impact",
+    },
+    {
+      metric: "10%",
+      label: "NPS Score Improvement",
+      context: "Banking SuperApp within first 2 months of launch",
+      type: "client_impact",
     },
     {
       metric: "20%",
       label: "Ticket Resolution Faster",
-      context: "IT Ops optimization for Abu Dhabi client in 6 months",
-      type: "metrics",
-    },
-    {
-      metric: "1200+",
-      label: "Critical KPIs Defined",
-      context: "Enterprise Marketing Architecture – UK",
-      type: "leadership",
-    },
-    {
-      metric: "450",
-      label: "Qualified Leads Generated",
-      context: "Dreamforce 2019 representation for Nagarro",
-      type: "wins",
-    },
-    {
-      metric: "150+",
-      label: "Resources Up-skilled",
-      context: "Edvantage initiative at Nagarro reducing churn by 20%",
-      type: "leadership",
-    },
-    {
-      metric: "$200K",
-      label: "Upsold Business Opportunity",
-      context: "Service request module + Oracle search at TCS Mexico",
-      type: "wins",
+      context: "IT ops optimization for Abu Dhabi client in first 6 months",
+      type: "client_impact",
     },
     {
       metric: "60%",
       label: "TAT Reduction",
-      context: "Issue resolution for Telecom client in Mexico",
-      type: "metrics",
-    },
-    {
-      metric: "1.5X",
-      label: "Call Handling Speed Increase",
-      context: "Oracle case management + FSM integration at Birlasoft",
-      type: "metrics",
-    },
-    {
-      metric: "30%",
-      label: "Order Fulfilment Time Decrease",
-      context: "Pan-India CRM rollout at Wipro",
-      type: "metrics",
-    },
-  ],
-
-  topImpact: [
-    {
-      metric: "60–70%",
-      label: "PRD Draft Time Cut",
-      context: "Agentic AI at McKinsey",
-    },
-    {
-      metric: "10x",
-      label: "Customer Growth",
-      context: "Automotive SuperApp",
+      context: "Issue resolution for telecom client in Mexico",
+      type: "client_impact",
     },
     {
       metric: "$500K",
-      label: "Revenue Secured",
-      context: "McKinsey Business Dev",
+      label: "Studies Independently Converted",
+      context: "Four IT resiliency & GenAI engagements via EOIs, RFPs, and CXO presentations",
+      type: "business_building",
+    },
+    {
+      metric: "$1.5M",
+      label: "Upsold Business Opportunity",
+      context: "Identified gap, pitched and won new module for telecom client — TCS Mexico",
+      type: "business_building",
+    },
+    {
+      metric: "450",
+      label: "Qualified Leads Generated",
+      context: "Represented firm at Dreamforce 2019 — gamification-driven lead gen",
+      type: "business_building",
     },
   ],
 
@@ -553,7 +520,7 @@ export const resumeData = {
       institution: "Massachusetts Institute of Technology, Sloan",
       degree: "System Design and Management",
       honors: "",
-      location: "USA",
+      location: "Boston, USA",
     },
     {
       institution: "University of Pune",
@@ -589,9 +556,5 @@ export const resumeData = {
     { country: "Saudi Arabia", type: "Visa", validity: "Till 2027" },
   ],
 
-  extra: [
-    "SQL proficiency",
-    "eScripts experience",
-    "Siebel EI expertise",
-  ],
 };
+
