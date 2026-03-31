@@ -12,36 +12,19 @@ import { resumeData } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import SectionHeading from "./SectionHeading";
 
+const METRIC_RE =
+  /(\$[\d,.]+[KMB]?\+?(?:[–-]\$?[\d,.]+[KMB])?|[\d,]+[–-][\d,]+%|\d+%|\d+x|[\d,]+\s*TPS|p\d+|[\d,]+\+|\d+M\+?)/gi;
+
 function extractMetrics(text: string): string[] {
-  const patterns = [
-    /\d+[–-]\d+%/g,
-    /\d+%/g,
-    /\$\d+K/g,
-    /\d+x/gi,
-    /\d+\.\d+X/g,
-    /\d+ million/gi,
-    /\d+M/g,
-    /\d+\+/g,
-    /1200\+/g,
-  ];
-  const metrics: string[] = [];
-  for (const p of patterns) {
-    const matches = text.match(p);
-    if (matches) metrics.push(...matches);
-  }
-  return [...new Set(metrics)];
+  const matches = text.match(METRIC_RE);
+  return matches ? [...new Set(matches)] : [];
 }
 
 function highlightMetrics(text: string): React.ReactNode {
-  const parts = text.split(
-    /(\d+[–-]\d+%|\d+%|\$\d+K|\d+x|\d+\.\d+X|\d+ million|\d+M|\d+\+|1200\+)/gi
-  );
+  const parts = text.split(METRIC_RE);
   return parts.map((part, i) => {
-    if (
-      /\d+[–-]\d+%|\d+%|\$\d+K|\d+x|\d+\.\d+X|\d+ million|\d+M|\d+\+|1200\+/i.test(
-        part
-      )
-    ) {
+    if (METRIC_RE.test(part)) {
+      METRIC_RE.lastIndex = 0;
       return (
         <span
           key={i}
@@ -214,6 +197,11 @@ export default function Experience() {
                         >
                           <div className="px-5 sm:px-6 pb-6 space-y-4">
                             <div className="h-px bg-white/5" />
+                            {"description" in exp && exp.description && (
+                              <p className="text-sm text-white/50 leading-relaxed italic">
+                                {highlightMetrics(exp.description as string)}
+                              </p>
+                            )}
                             {exp.bullets.map((bullet, bi) => (
                               <div key={bi} className="space-y-2">
                                 <h4 className="text-sm font-semibold text-white/90 flex items-center gap-2">

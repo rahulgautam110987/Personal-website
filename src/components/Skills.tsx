@@ -27,27 +27,33 @@ export default function Skills() {
           icon={<Code2 className="w-5 h-5" />}
         />
 
-        {/* Specialties */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12 p-6 rounded-2xl border border-white/5 bg-white/[0.02]"
-        >
-          <h3 className="text-sm font-semibold text-white/60 mb-4 uppercase tracking-wider">
-            Specialties
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {resumeData.specialtiesList.map((item, i) => (
-              <span
-                key={i}
-                className="px-3 py-1.5 text-xs rounded-lg bg-white/5 text-white/60 border border-white/5 hover:border-white/15 hover:text-white/80 transition-colors"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </motion.div>
+        {/* Specialties — capability categories */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+          {resumeData.specialtiesCategories.map((group, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ delay: idx * 0.06 }}
+              className="p-5 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04] transition-all"
+            >
+              <h3 className="text-sm font-semibold text-white/70 mb-3 uppercase tracking-wider">
+                {group.category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((item, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1.5 text-xs rounded-lg bg-white/5 text-white/60 border border-white/5 hover:border-white/15 hover:text-white/80 transition-colors"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
         {/* Skills grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

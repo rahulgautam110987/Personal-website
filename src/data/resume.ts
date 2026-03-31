@@ -8,45 +8,60 @@ export const resumeData = {
     phone: "+91-9319993881",
     phoneSecondary: "+91-9711924745",
     email: "rahulgautam1187@gmail.com",
-    linkedin: "https://www.linkedin.com/in/rahulgautam",
+    linkedin: "https://www.linkedin.com/in/rahulgautamcloud/",
     education_highlight: "MBA – IIM Calcutta",
     location: "India",
     summary: [
-      "Strategic technology leader with 17+ years advising C-suite executives on petabyte-scale platform design, IT resilience, and digital transformation—driving measurable business outcomes across banking & capital markets, automotive, and energy",
-      "Proven track record of building high-performance teams across 15+ countries, securing $10M+ in client engagements, and delivering regulatory-first frameworks adopted at national scale",
+      "Technology executive with 17 years leading large-scale digital transformation, AI, and platform programs for Fortune 500 clients across banking, insurance, capital markets, energy, and automotive sectors",
+      "Brings a rare combination of deep technology fluency and boardroom credibility — with a track record of delivering multi-million-dollar programs across 15+ countries spanning Asia, the Middle East, and North America",
     ],
     specialties:
-      "IT Resiliency, Enterprise / IT / Integration / Business architecture, IT Operating model, Cloud suitability assessment (Migration, deployment, Ops model, FinOps), Application rationalization, Technology modernization assessments (DevSecOps, API Manager, Data architecture, Performance, microservice, network, etc.), Loyalty management, Business Development, ITIL Processes v4, PRM IT v3, BPMN 2.0, IT Governance model, Agile, Scrum, Cybersecurity frameworks, Tech RFPs, Product Roadmap Development, GenAI solution consultant, Project and Portfolio management",
+      "GenAI strategy & solution design, AI/ML platform architecture, Agentic AI, Automation, Data governance, MLOps, Digital transformation, IT roadmap & operating model design, Application modernisation, IT cost optimisation, Business case & RFP development, Enterprise architecture (TOGAF), IT resiliency & BCDR, Observability & SRE, Cloud platforms (Azure, AWS), Microservices & API design, Large programme delivery, Agile at scale, DevSecOps, Vendor governance",
     technologies:
       "AWS, Azure, Salesforce (Sales, Service, Commerce, Force.com, Community), Datorama, SFMC, Oracle CX (Sales, Service), Python, CI/CD pipeline diagnose, Observability (AppDynamics), Batch processing (Hadoop, Spark), SAP ERP Integration, MuleSoft, Jitterbit, React Native, Flutter, SharePoint, Siebel EAI, Siebel Order Management, Siebel, EI, IAM Solutions, FIGMA, Java, ARIS, BPMN, HTML, jQuery, SQL, Apex, RestAPI, Webservice, Visualforce, eScripts, PHP, XML, SOAP, GraphQL, Aura, Lightning framework, TensorFlow, Docker, Kubernetes, GitHub, MLFlow, Power BI, Excel modelling, PowerPoint, JIRA, MPP databases, MarTech stack, Adobe experience cloud, Campaign manager, Airflow, Terraform, Ansible, Splunk, Solace",
   },
 
-  specialtiesList: [
-    "IT Resiliency",
-    "Enterprise Architecture",
-    "IT Architecture",
-    "Integration Architecture",
-    "Business Architecture",
-    "IT Operating Model",
-    "Cloud Suitability Assessment",
-    "Cloud Migration & FinOps",
-    "Application Rationalization",
-    "Technology Modernization",
-    "DevSecOps",
-    "API Management",
-    "Data Architecture",
-    "Microservices",
-    "Loyalty Management",
-    "Business Development",
-    "ITIL v4",
-    "BPMN 2.0",
-    "IT Governance",
-    "Agile & Scrum",
-    "Cybersecurity Frameworks",
-    "Tech RFPs",
-    "Product Roadmap Development",
-    "GenAI Solution Consulting",
-    "Project & Portfolio Management",
+  specialtiesCategories: [
+    {
+      category: "AI, GenAI & Data Platforms",
+      items: [
+        "GenAI Strategy & Solution Design",
+        "AI/ML Platform Architecture",
+        "Agentic AI",
+        "Automation",
+        "Data Governance",
+        "MLOps",
+      ],
+    },
+    {
+      category: "Technology Strategy & CXO Advisory",
+      items: [
+        "Digital Transformation",
+        "IT Roadmap & Operating Model Design",
+        "Application Modernisation",
+        "IT Cost Optimisation",
+        "Business Case & RFP Development",
+      ],
+    },
+    {
+      category: "Platform Engineering & Resiliency",
+      items: [
+        "Enterprise Architecture (TOGAF)",
+        "IT Resiliency & BCDR",
+        "Observability & SRE",
+        "Cloud Platforms (Azure, AWS)",
+        "Microservices & API Design",
+      ],
+    },
+    {
+      category: "Governance",
+      items: [
+        "Large Programme Delivery",
+        "Agile at Scale",
+        "DevSecOps",
+        "Vendor Governance",
+      ],
+    },
   ],
 
   globalReach: [
@@ -67,84 +82,45 @@ export const resumeData = {
   experience: [
     {
       company: "McKinsey & Company",
-      locations: "India, Thailand, Hong Kong, Vietnam, Dubai",
-      role: "Senior Tech Expert – Platform & IT Resilience (India banking)",
+      locations: "India, Thailand, Hong Kong, Vietnam, Japan, Dubai",
+      role: "Senior Tech Expert – Expert Consulting",
       dates: "Feb 2023 – Present",
+      description:
+        "Led technology strategy and architecture engagements across a $5M–$15M client portfolio spanning BFSI, energy, and automotive sectors. Directed cross-functional teams and advised CXO across 6+ countries on digital transformation, AI adoption, and IT resiliency",
       bullets: [
         {
-          title: "Agentic AI – PRD Generator (for PSU)",
+          title: "Agentic AI & GenAI — Production Deployments",
           subbullets: [
-            "Built a policy-aware PRD copilot that converts intent into PRDs with user stories, Gherkin tests, NFR pack, and OpenAPI stubs—cut time to first draft by 60–70%",
-            "Implemented RAG over prior PRDs, policy controls, and API catalog; integrated with Confluence/Jira; human-in-the-loop approvals with full audit trail",
+            "Architected first production-grade agentic AI platform for McKinsey — policy-aware PRD copilot that cut time-to-first-draft by 60–70%; deployed within a regulated private VPC with RBAC/ABAC controls, human-in-the-loop approvals, and full audit trail",
+            "Delivered a first-of-its-kind multi-agent effort estimator for one of India's largest private banks — reducing estimation cycle time by 30–50% using ML regressors trained on live project history; outputs include P50/P90 ranges and scope sensitivity analysis",
           ],
         },
         {
-          title: "Agentic AI – Effort Estimator (for Indian Pvt bank)",
+          title: "Resiliency & Observability — Regulatory-Grade Platforms",
           subbullets: [
-            "Delivered multi-agent estimator that classifies backlog as reuse/refactor/rebuild and produces calibrated hours, FTE mix, cost bands, and sprint plan—estimation cycle time faster by 30–50%",
-            "Trained light regressors on Jira/ADO history; outputs P50/P90 ranges, variance rationale vs. benchmarks, and sensitivity analysis for scope trade-offs",
+            "Designed India's first SEBI-mandated IT resiliency framework for the national stock exchange — introducing multi-region failover, event-based reconciliation, and an industry-leading RPO/RTO of under 1 minute for core ledgers",
+            "Architected SEWA — India's largest public sector bank's first observability platform — delivering real-time availability monitoring across 300+ banking APIs, directly strengthening the bank's RBI compliance posture",
           ],
         },
         {
-          title: "LegacyX Platform",
+          title: "Large-Scale Platform Engineering",
           subbullets: [
-            "Led the business case (TCO, adoption model) and authored the reference architecture and governance to operationalize agentic AI in regulated client VPCs with private link, RBAC/ABAC, and observability",
+            "Led end-to-end architecture of a SuperApp platform serving 6M+ users across real-time payments, identity, wallet, and telemetry — achieving 3,000 TPS at peak with p95 latency under 50ms; TCO modelling directly influenced a ~$12M CapEx",
+            "Designed an AI/ML-enabled customer data platform for a Fortune 500 automotive client — delivering real-time segmentation, churn prediction, and personalised marketing automation at enterprise scale",
+            "Architected India's largest energy company's first cloud-based customer-facing platform — introducing RFID, UPI, ANPR, and wallet-based payment experiences across their national retail outlet network",
           ],
         },
         {
-          title: "Technology Blueprint",
+          title: "Cross-Border Transformation & Global Delivery",
           subbullets: [
-            "Independently assessed the technology maturity of India's largest banking client, created detailed capability maps, and developed network, security, and tech architecture diagrams, evaluating their complete tech stack including telematics and MarTech stack",
-            "Developed a strategic roadmap that enabled the successful implementation of their SuperApp, enhancing customer experience and improving NPS score by 10% within first 2 months, increasing customer base to 6 million in 1st year",
+            "Led technology integration architecture for a cross-border bank merger in Vietnam — unified 60+ legacy systems into a single target architecture, achieving 30% faster integration and 10% effort reduction through reusable orchestration templates",
+            "Delivered AI-powered personalisation engine for a Fortune 500 US apparel retailer combining document intelligence with Adobe Experience Cloud — generated 18% uplift in returning customer spend",
           ],
         },
         {
-          title: "IT Resiliency for Capital Markets",
+          title: "Business Development & CXO Origination",
           subbullets: [
-            "Developed India's first SEBI-approved IT resiliency model for stock exchanges, set to be implemented across all Indian stock markets, establishing a baseline score and a trendline score to track improvements",
-          ],
-        },
-        {
-          title: "SuperApp for India's Largest Automotive Client",
-          subbullets: [
-            "Led a team of 20 management consultants, product managers, UI/UX designers, and tech professionals to execute the strategy roadmap, resulting in a 10x growth in platform customers within 1.5 years",
-          ],
-        },
-        {
-          title:
-            "Customer-Facing Application (IoT Solution / Tech Architecture)",
-          subbullets: [
-            "Conducted an in-depth assessment of the current Retail Outlet payment system for India's largest energy company, developed a detailed architecture to enhance customer payment experiences (RFID, UPI, ANPR, Wallet based) on their 1st cloud-based customer facing application with detailed TCO analysis",
-          ],
-        },
-        {
-          title: "India's Largest Bank – SEWA Dashboard",
-          subbullets: [
-            "Implemented the Next Generation Service Availability Web Page (SEWA) dashboard, designing L1, L2, and L3 levels for regulators, banks, and customers, and building a tech integration plan to ensure real-time updates on digital payment channels and banking services availability, addressing service disruptions, and enhancing observability, resulting in a 10% improvement in customer satisfaction and 100% regulatory compliance",
-          ],
-        },
-        {
-          title: "IT Operating and Incident Management Processes",
-          subbullets: [
-            "Assessed and optimized IT operations and incident management processes for an Abu Dhabi-based client. Utilized ARIS and BPMN to map current processes, identify gaps, and develop new procedures, significantly improving operational efficiency and accelerating ticket resolution times by 20% in 1st 6 months",
-          ],
-        },
-        {
-          title: "Business Development",
-          subbullets: [
-            "Independently secured and converted four studies of IT resiliency, Tech modernization with GenAI based use-cases, worth $500K for McKinsey by responding to EOIs, building RFP responses, and presenting to CXOs",
-          ],
-        },
-        {
-          title: "Tech Assessment – Vietnam",
-          subbullets: [
-            "Assessed complete tech stacks, including MarTech, for two merging companies, developed a two-year roadmap with quick wins and a value-driven business case, achieving seamless integration with a 30% reduction in time and a 10% reduction in effort",
-          ],
-        },
-        {
-          title: "Tech Modernization – USA",
-          subbullets: [
-            "Architected a solution of customer data platform (ML and AI-based) + SFDC marketing cloud for an American apparel company, resulting in 10% increase in loyal customer base through B2C targeted profiling and customer segmentation on a real-time basis",
+            "Independently originated, developed, and closed four client studies across IT resiliency and GenAI modernisation — generating $500K+ in McKinsey revenues through direct CXO engagement, EOI responses, and RFP presentations with no prior relationship",
           ],
         },
       ],
@@ -153,14 +129,13 @@ export const resumeData = {
       company: "KPMG Global Services India",
       locations: "India",
       role: "Manager – CIO Advisory",
-      dates: "Oct 2022 – Feb 2023",
+      dates: "Sep 2022 – Feb 2023",
       bullets: [
         {
-          title: "ALM and TLM Optimization and Cloud Adoption",
+          title: "ALM and TLM Optimization & Cloud Adoption",
           subbullets: [
-            "Evaluated legacy data center's As-Is IT infrastructure at both macro and micro levels, comprehensively assessing applications, functionalities, dependencies for effective insight",
-            "Assessed client's cloud and app capabilities, documented architecture, and roadmap, and created business case with quantitative benefits",
-            "Recommended modernization treatment solution with 7 R's framework and created Cloud Migration Roadmap, ROM (Estimates) and Business Case (AS-IS/TO-BE)",
+            "Evaluated legacy data center's As-Is IT infrastructure at macro and micro levels, comprehensively assessing applications, functionalities, and dependencies",
+            "Assessed client's cloud and app capabilities, documented architecture and roadmap, and created business case with quantitative benefits; recommended modernization treatment with 7 R's framework and created Cloud Migration Roadmap, ROM and Business Case (AS-IS/TO-BE)",
           ],
         },
       ],
@@ -172,29 +147,27 @@ export const resumeData = {
       dates: "April 2021 – Sep 2022",
       bullets: [
         {
-          title: "Customer Success Manager – Saudi",
+          title: "Technology Strategy & Operating Model — UAE",
           subbullets: [
-            "Developed long-term strategic relationships with C-level executives of key Business & IT accounts to understand their needs. Planned, coordinated, and executed the end-to-end implementation of OAuth 2.0 for 30 suppliers within two months",
+            "Led hybrid cloud transformation strategy for a large UAE enterprise — built financial model quantifying multi-year cost savings, redesigned target cloud operating model with new governance principles across functions and processes",
           ],
         },
         {
-          title: "Cloud Strategy, FinOps and Operating Model – Dubai",
+          title: "Enterprise Performance Management — UK",
           subbullets: [
-            "Developed a business case for hybrid cloud transformation by identifying cost savings through financial modeling, and planned the migration of complex, interdependent application to the cloud using industry-leading tools",
-            "Analyzed current operating model, its components impacting client operations and organization & designed new principles for the functions and processes for the cloud operating model",
+            "Defined enterprise performance management framework for a UK quick-commerce client — facilitated design thinking sessions across business and technology leadership to identify and structure 1,200+ critical KPIs",
           ],
         },
         {
-          title: "Application Portfolio Rationalization – Kuwait",
+          title: "Application Portfolio Rationalisation — Kuwait",
           subbullets: [
-            "Conducted business capabilities assessment & planning supported by analyzing the current state of the capabilities & classifying desired future state capabilities, formulating target state",
-            "Built and pitched the business case of APO exercise, building $500K opportunity for the company",
+            "Conducted application portfolio rationalisation for a Kuwait government entity — assessed business capability gaps, formulated target state architecture, and built a compelling investment case that unlocked a $500K strategic opportunity",
           ],
         },
         {
-          title: "Enterprise Marketing Architecture – UK",
+          title: "Client Relationship & Delivery — Saudi",
           subbullets: [
-            "Created target application and technology views aligned with Q-Commerce models, led design thinking sessions to define 1200+ critical KPIs and develop an enterprise performance management framework, and assessed client portfolios for cloud adoption and integration using Mulesoft and Jitterbit",
+            "Managed strategic C-level relationships across Saudi Arabian government and enterprise accounts — developed long-term account plans and oversaw end-to-end delivery across 30 supplier integrations, completed within a two-month window",
           ],
         },
       ],
@@ -206,33 +179,27 @@ export const resumeData = {
       dates: "April 2018 – March 2020",
       bullets: [
         {
-          title: "Salesforce Community Cloud for GE Subsidiary",
+          title: "Salesforce Community Cloud — GE Subsidiary",
           subbullets: [
-            "Spearheaded a team of nine people to architect and to manage the delivery of Salesforce Community Cloud for GE subsidiary, accelerating the company's ability to bring a more customized offering, increasing the self-service rate by 15%",
+            "Led a 9-member team to architect and deliver Salesforce Community Cloud for a GE subsidiary — accelerated the client's ability to launch customised offerings at scale, increasing customer self-service rate by 15%",
           ],
         },
         {
-          title: "Business Case – American Fan Blade Manufacturer",
+          title: "Business Case — American Industrial Manufacturer",
           subbullets: [
-            "Coordinated with pre-sales/business development team to design and implement the actionable business case (SFDC service cloud + Mobility) for American fan blade manufacturer, leading to expected business value of 20% faster case resolution",
+            "Designed and built the technology business case for Salesforce Service Cloud and Mobility solution to an American industrial manufacturer — achieved outcome of 20% faster case resolution",
           ],
         },
         {
-          title: "Dreamforce 2019 Representation",
+          title: "Cloud Financial Analyzer",
           subbullets: [
-            "Represented Nagarro in Salesforce' Dreamforce 2019 (San Francisco) and used gamification to generate 450 better-qualified leads",
-          ],
-        },
-        {
-          title: "Cloud Financial Analyser",
-          subbullets: [
-            "Contributed to Nagarro's in-house product \"Cloud Financial Analyser\" to expedite the client's journey to cloud transformation",
+            "Co-developed Nagarro's internal 'Cloud Financial Analyzer' product — contributed to building a reusable accelerator that shortened client cloud transformation journeys and strengthened Nagarro's advisory proposition in the market",
           ],
         },
         {
           title: "Edvantage Initiative",
           subbullets: [
-            "Solved a complex problem of resource gap with a new initiative \"Edvantage\" to up-skill and cross-skill 150+ resources, increasing test scores pre-and post-training and reducing employee churn rate by 20%",
+            "Founded 'Edvantage' — an internal capability-building initiative that upskilled and cross-trained 150+ resources across the business unit and reduced employee churn by 20%, adopted as a model for talent development within the practice",
           ],
         },
       ],
@@ -244,51 +211,23 @@ export const resumeData = {
       dates: "Jan 2014 – March 2018",
       bullets: [
         {
-          title: "Telecom Client – Mexico",
+          title: "Telecom Client — Mexico",
           subbullets: [
-            "Functioned as an onsite Engagement manager to form and lead a team of nine engineers for a Telecom client in Mexico to set-up and ramp-up support services, bringing stability to client's IT system and building a long-term trusted business relationship",
-            "Engaged with a client IT team to proactively study current application gaps, upselling new business opportunity of Service request module + Oracle Secure enterprise search worth $1.5M, thus reducing TAT for issue resolution by 60%",
-          ],
-        },
-        {
-          title: "Pan-Canada Pharma Client",
-          subbullets: [
-            "Drove a team of six associates to implement a Pan-Canada multi-lingual application for a pharma client within a short span of 3 months, increasing the reach to new customers, retaining the existing customer, and raising patient-centric care",
-          ],
-        },
-        {
-          title: "Contact Center Cloud CRM – US Transportation",
-          subbullets: [
-            "Led 5-member team to launch Contact center cloud CRM application for US-based American transportation domain company, improving business flow, creating a consistent experience for customers across all channels and increasing service rate by 10%",
+            "Deployed as onsite engagement manager in Mexico — built and led a 9-engineer team from scratch to stabilise a telecom client's IT operations; proactively identified and closed a $1.5M upsell opportunity reducing issue resolution TAT by 60%",
           ],
         },
       ],
     },
     {
-      company: "Birlasoft India Pvt. Ltd",
+      company: "Birlasoft & Wipro Technologies",
       locations: "India",
-      role: "Sr. Software Engineer",
-      dates: "May 2012 – Sep 2013",
+      role: "Software Engineer — CRM & Order Management",
+      dates: "May 2010 – Sep 2013",
       bullets: [
         {
-          title: "Mobility + Enterprise Case Management and IoT",
+          title: "Early Career",
           subbullets: [
-            "Significant contributor to the team pitching (Mobility + Enterprise Case Management and IoT) based solution to customer's CIO",
-            "Steered 5-member team to pitch improvements in the service flow, showcasing growth by integrating Oracle case management with Field service management (FSM), increasing call handling speed by 1.5X and giving a 360-degree view of the customer",
-          ],
-        },
-      ],
-    },
-    {
-      company: "Wipro Technologies",
-      locations: "India",
-      role: "Project Engineer",
-      dates: "May 2010 – May 2012",
-      bullets: [
-        {
-          title: "Order Management CRM – Telecom B2B",
-          subbullets: [
-            "Coordinated with 3-member team to enable Pan-India roll out of \"Order Management\" CRM application for telecom B2B users, led to decrease in order-fulfilment time by 30% and improving CSI to 90%, the success resulted in many future projects for Wipro",
+            "CRM and order management delivery across telecom and BFSI sectors",
           ],
         },
       ],
@@ -298,86 +237,92 @@ export const resumeData = {
   achievements: [
     {
       metric: "India's 1st",
-      label: "SEBI-Approved IT Resiliency Model",
-      context: "For stock exchanges — set to be implemented across all Indian stock markets",
+      label: "SEBI-Mandated IT Resiliency Framework",
+      context:
+        "For the national stock exchange — RPO/RTO under 1 minute for core ledgers",
       type: "thought_leadership",
     },
     {
       metric: "1200+",
       label: "Enterprise Performance Metrics",
-      context: "Designed KPI framework for Q-Commerce enterprise architecture — UK",
+      context:
+        "Designed KPI framework for UK quick-commerce client — Accenture",
       type: "thought_leadership",
     },
     {
       metric: "150+",
       label: "Professionals Trained & Upskilled",
-      context: "Edvantage initiative at Nagarro — reduced employee churn by 20%",
+      context:
+        "Founded Edvantage at Nagarro — reduced employee churn by 20%, adopted as talent development model",
       type: "thought_leadership",
     },
     {
-      metric: "10x",
-      label: "Platform Customer Growth",
-      context: "SuperApp for India's largest automotive client in 1.5 years",
-      type: "client_impact",
-    },
-    {
-      metric: "6M",
-      label: "Customer Base in 1st Year",
-      context: "SuperApp for India's largest banking client",
+      metric: "6M+",
+      label: "SuperApp Users in 1st Year",
+      context:
+        "Banking SuperApp — 3,000 TPS at peak, p95 latency under 50ms, ~$12M CapEx influenced",
       type: "client_impact",
     },
     {
       metric: "60–70%",
       label: "PRD Draft Time Reduction",
-      context: "Agentic AI PRD copilot — policy-aware with RAG and audit trail",
+      context:
+        "First production-grade agentic AI platform for McKinsey — policy-aware with RBAC/ABAC",
       type: "client_impact",
     },
     {
       metric: "30–50%",
       label: "Estimation Cycle Faster",
-      context: "Multi-agent effort estimator for Indian private bank",
+      context:
+        "First-of-its-kind multi-agent effort estimator for India's largest private bank",
       type: "client_impact",
     },
     {
-      metric: "100%",
-      label: "Regulatory Compliance",
-      context: "SEWA dashboard for India's largest bank — L1/L2/L3 for regulators",
+      metric: "300+",
+      label: "Banking APIs Monitored",
+      context:
+        "SEWA — India's largest public sector bank's first observability platform",
       type: "client_impact",
     },
     {
-      metric: "10%",
-      label: "NPS Score Improvement",
-      context: "Banking SuperApp within first 2 months of launch",
+      metric: "18%",
+      label: "Uplift in Returning Customer Spend",
+      context:
+        "AI-powered personalisation engine for Fortune 500 US apparel retailer",
       type: "client_impact",
     },
     {
-      metric: "20%",
-      label: "Ticket Resolution Faster",
-      context: "IT ops optimization for Abu Dhabi client in first 6 months",
+      metric: "60+",
+      label: "Legacy Systems Unified",
+      context:
+        "Cross-border bank merger in Vietnam — 30% faster integration",
       type: "client_impact",
     },
     {
       metric: "60%",
       label: "TAT Reduction",
-      context: "Issue resolution for telecom client in Mexico",
+      context: "Issue resolution for telecom client in Mexico — TCS",
       type: "client_impact",
     },
     {
-      metric: "$500K",
-      label: "Studies Independently Converted",
-      context: "Four IT resiliency & GenAI engagements via EOIs, RFPs, and CXO presentations",
+      metric: "$500K+",
+      label: "Studies Independently Originated",
+      context:
+        "Four IT resiliency & GenAI engagements — direct CXO origination with no prior relationship",
       type: "business_building",
     },
     {
       metric: "$1.5M",
       label: "Upsold Business Opportunity",
-      context: "Identified gap, pitched and won new module for telecom client — TCS Mexico",
+      context:
+        "Identified gap, pitched and won new module for telecom client — TCS Mexico",
       type: "business_building",
     },
     {
-      metric: "450",
-      label: "Qualified Leads Generated",
-      context: "Represented firm at Dreamforce 2019 — gamification-driven lead gen",
+      metric: "$500K",
+      label: "Strategic Opportunity Unlocked",
+      context:
+        "Application portfolio rationalisation for Kuwait government entity — Accenture",
       type: "business_building",
     },
   ],
@@ -524,29 +469,27 @@ export const resumeData = {
     },
     {
       institution: "University of Pune",
-      degree: "B.E. (Computer Science)",
+      degree: "B.E. (Computer Science) – Full-time",
       honors: "Dean's Lister",
       location: "Pune, India",
     },
   ],
 
   certifications: [
-    "AWS Solution Architect – Professional",
-    "AWS Solution Architect – Associate",
-    "AWS Cloud DevSecOps",
-    "AWS Cloud Practitioner",
+    "AWS Solutions Architect – Professional",
+    "AWS Solutions Architect – Associate",
+    "AWS Certified DevOps Engineer – Professional",
     "Azure Solutions Architect Expert",
     "Six Sigma – KPMG Certified",
     "Certified Professional Scrum Master (PSM)",
-    "Certified Business Analytics Practitioner (CBAP) – Python",
+    "Certified Business Analytics Practitioner (CBAP)",
     "Salesforce Certified Admin",
-    "Salesforce Platform Developer – 1 and 2",
+    "Salesforce Platform Developer – I & II",
     "Salesforce Sales Cloud Consultant",
-    "Salesforce Marketing Cloud Consultant and Administrator",
+    "Salesforce Marketing Cloud Consultant & Administrator",
     "Salesforce Solution Architect",
     "Salesforce Data Architect",
     "Salesforce CPQ Specialist",
-    "PMP©",
     "TOGAF-10 (1 & 2)",
   ],
 
@@ -555,5 +498,4 @@ export const resumeData = {
     { country: "Japan", type: "Visa", validity: "Till 2030" },
     { country: "Saudi Arabia", type: "Visa", validity: "Till 2027" },
   ],
-
 };

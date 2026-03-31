@@ -11,12 +11,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Rahul Gautam | Senior Tech Expert – Platform & IT Resilience",
   description:
-    "Strategic technology leader with 17+ years advising C-suite executives. MBA – IIM Calcutta. McKinsey & Company. AWS, Azure, Salesforce Architect.",
+    "Technology executive with 17 years leading digital transformation, AI, and platform programs for Fortune 500 clients. MBA – IIM Calcutta. McKinsey & Company.",
   keywords: [
     "Rahul Gautam",
     "Senior Tech Expert",
     "McKinsey",
-    "Cloud Architecture",
+    "Digital Transformation",
+    "AI Platform",
     "IT Resilience",
     "Enterprise Architecture",
     "AWS",
@@ -24,12 +25,14 @@ export const metadata: Metadata = {
     "Salesforce",
     "IIM Calcutta",
     "MIT Sloan",
+    "GenAI",
+    "Agentic AI",
   ],
   authors: [{ name: "Rahul Gautam" }],
   openGraph: {
     title: "Rahul Gautam | Senior Tech Expert",
     description:
-      "17+ years advising C-suite executives on enterprise architecture and digital transformation at McKinsey, Accenture, KPMG, and more.",
+      "Technology executive with 17 years leading digital transformation, AI, and platform programs at McKinsey, Accenture, KPMG across 15+ countries.",
     type: "website",
   },
 };
