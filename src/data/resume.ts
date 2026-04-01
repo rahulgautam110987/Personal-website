@@ -206,7 +206,7 @@ export const resumeData = {
     },
     {
       company: "Tata Consultancy Services",
-      locations: "USA, Mexico, Canada, Brazil, Ecuador, India",
+      locations: "USA, Mexico, Ecuador, India",
       role: "Associate Consultant – Enterprise Application Services",
       dates: "Jan 2014 – March 2018",
       bullets: [
@@ -494,7 +494,7 @@ export const resumeData = {
   ],
 
   visas: [
-    { country: "USA", type: "B1/B2", validity: "Till 2026" },
+    { country: "USA", type: "B1/B2", validity: "Till 2036" },
     { country: "Japan", type: "Visa", validity: "Till 2030" },
     { country: "Saudi Arabia", type: "Visa", validity: "Till 2027" },
   ],
